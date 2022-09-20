@@ -9,7 +9,7 @@
     args:
          creates: /sbin/nginx
   - name: Insert Index Page
-    template:
+    copy:
       src: index.html
       dest: /usr/share/nginx/html/index.html
   - name: start nginx
