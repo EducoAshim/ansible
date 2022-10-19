@@ -1,2 +1,19 @@
-[myservers]
-18.236.100.79 ansible_user=ec2-user
+[win]
+172.16.2.5 
+172.16.2.6 
+
+[win:vars]
+ansible_user=azure_user
+ansible_password=sdf12%432
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+
+[linux]
+xxx.xxx.xxx.xxx
+
+[linux-vars]
+ansible_user=ec2-user
+ansible_password=password
+key_path=
+ansible_connection=ssh
+ansible_winrm_server_cert_validation=ignore
